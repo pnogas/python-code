@@ -35,7 +35,6 @@ def setRowAndColumnToZero(rectangle_matrix):
 			else:
 				for column in row:
 					if column_num in zero_columns:
-						print 
 						rectangle_matrix[row_num][column_num] = 0
 					column_num += 1
 			row_num += 1
@@ -46,3 +45,19 @@ print "Test1: 0 1 2"
 print "Test1: 3 4 5"
 print "Test1: 6 7 8"
 print setRowAndColumnToZero([[0,1,2],[3,4,5],[6,7,8]]) == [[0,0,0],[0,4,5],[0,7,8]]
+
+print "Test2: 0 1 2 3 8"
+print "Test2: 4 5 6 7 9"
+print "Test2: 8 9 0 1 7"
+print "Test2: 2 3 4 5 6"
+print setRowAndColumnToZero([[0,1,2,3,8],[4,5,6,7,9],[8,9,0,1,7],[2,3,4,5,6]]) == [[0,0,0,0,0],[0,5,0,7,9],[0,0,0,0,0],[0,3,0,5,6]]
+
+print "Test3: 3"
+print setRowAndColumnToZero([[3]]) == [[3]]
+
+print "Test4: 0"
+print setRowAndColumnToZero([[0]]) == [[0]]
+
+print "Test5: 0 1"
+print "Test5: 2 3"
+print setRowAndColumnToZero([[0,1],[2,3]]) == [[0,0],[0,3]]
