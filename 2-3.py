@@ -20,6 +20,7 @@ def deleteNode(linked_list,node):
 				print "error with linked list pointers?"
 				raise Exception("error with linked list pointers?")
 # still really don't know how to delete the node itself, but at least now it's out of the list
+#again, maybe not best to be trying to implement this in python...
 
 
 
