@@ -58,3 +58,7 @@ balenced_tree4 = Tree(c)
 
 print "Test 4: [[6],[3,9],[2,5,8,10],[1,4,7]]"
 print treeToLists(balenced_tree4) == [[6],[3,9],[2,5,8,10],[1,4,7]]
+
+d = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+balenced_tree5 = Tree(d)
+print treeToLists(balenced_tree5)

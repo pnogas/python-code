@@ -51,17 +51,17 @@ def commonAncestor(tree, node1, node2):
 		if tree.left == node1 or tree.left == node2:
 			return tree.left
 		else:
-			commonAncestor(tree.left,node1,node2)
+			return commonAncestor(tree.left,node1,node2)
 	#this was put after checking the left side to avoid checking the right side if it is not necessary.
 	nodes_on_right = numberOfDesiredNodes(tree.right, node1, node2)
 	if nodes_on_right == 2:
 		if tree.right == node1 or tree.right == node2:
 			return tree.right
 		else:
-			commonAncestor(tree.right,node1, node2)
+			return commonAncestor(tree.right,node1, node2)
 	#4.Last option is one on each side
 	if nodes_on_right == 1 and nodes_on_left == 1:
-		return Tree
+		return tree
 	#5. error on input? I don't think it should ever get here if the input makes sesnse...
 	return "Error, no common ancestor!" 
 
@@ -81,7 +81,7 @@ print "Test 1: nodes 6,3"
 print commonAncestor(a, a, a.left) ==  a
 
 print "Test 2: nodes 3,9"
-print commonAncestor(a, a.left, a.right) #==  a
+print commonAncestor(a, a.left, a.right)  ==  a
 
 print "Test 3: nodes 1,2"
 print commonAncestor(a, a.left.left.left, a.left.left) ==  a.left.left
